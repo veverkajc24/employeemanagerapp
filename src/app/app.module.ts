@@ -1,22 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgModel } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { EmployeeService } from './employee.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NgModel
   ],
   imports: [
     BrowserModule,
-    HttpClientModule, FormsModule,
+    HttpClientModule, 
+    FormsModule,
     AppComponent,
   ],
-  providers: [HttpClientModule, EmployeeService],
+  providers: [HttpClientModule, EmployeeService, provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
