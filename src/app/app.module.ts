@@ -18,6 +18,7 @@ import { CommonModule } from '@angular/common';
     HttpClientModule, 
     FormsModule,
     AppComponent,
+    NgModel
   ],
   providers: [HttpClientModule, EmployeeService, provideHttpClient()],
   bootstrap: [AppComponent]

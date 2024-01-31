@@ -8,13 +8,14 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from "@angular/common/http";
 import { NgModule } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
 })
 export class AppComponent implements OnInit {
   title = 'employeemanagerapp';
